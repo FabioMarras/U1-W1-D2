@@ -19,8 +19,12 @@ class AllTheBooks extends Component {
     console.log("Categoria: ", x);
     return (
       <div className="container">
-        <button onClick={() => this.cambiaCategoria("fantasy")}>fantasy</button>
-        <button onClick={() => this.cambiaCategoria("horror")}>horror</button>
+        <Button variant="success" onClick={() => this.cambiaCategoria("fantasy")}>
+          fantasy
+        </Button>
+        <Button variant="danger" onClick={() => this.cambiaCategoria("horror")}>
+          horror
+        </Button>
         <div className="row">
           {libreriaCorrente.map((Libro, index) => (
             <div className="col-6 col-md-4 col-lg-3 col-xl-2 mb-3" key={`libro-${index}`}>
